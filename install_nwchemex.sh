@@ -76,6 +76,7 @@ cat <<EOF > setup_env.sh
 # Setup python environment
 source ${NWCHEMEX_DIR}/.venv/bin/activate
 export LD_LIBRARY_PATH=${NWCHEMEX_DIR}/install/lib:\$LD_LIBRARY_PATH
+export PYTHONPATH=${NWCHEMEX_DIR}/install
 EOF
 
 echo "Setup Complete! NEAT!!!"
