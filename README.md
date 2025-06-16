@@ -37,3 +37,7 @@ source ./setup_env.sh
 
 This will export the PYTHONPATH, LD_LIBRARY_PATH, and CPLUS_INCLUDE_PATH variables, rendering the shell ready for
 both Python and C++ development activities.
+
+The `install_nwchemex.sh` script can be modified to specify the specific version of Libint2, or even the specific URL
+you want to pull NWChemEx from. This script was made to be as hands off as possible for the user, so if you encounter 
+issues please let me know!
