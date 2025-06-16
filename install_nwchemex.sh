@@ -75,9 +75,6 @@ cd $TOP_DIR
 cat <<EOF > setup_env.sh
 # Setup python environment
 source ${NWCHEMEX_DIR}/.venv/bin/activate
-export CPLUS_INCLUDE_PATH=${NWCHEMEX_DIR}/install/include
-export CPLUS_INCLUDE_PATH=${NWCHEMEX_DIR}/build/_deps/scf-src/inlcude:\$CPLUS_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=${NWCHEMEX_DIR}/build/_deps/nux-src/inlcude:\$CPLUS_INCLUDE_PATH
 export LD_LIBRARY_PATH=${NWCHEMEX_DIR}/install/lib:\$LD_LIBRARY_PATH
 export PYTHONPATH=${NWCHEMEX_DIR}/install
 EOF
