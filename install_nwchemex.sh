@@ -33,7 +33,8 @@ VERSION=2.9.0
 if [[ ! -f libint-${VERSION}.tgz ]]; then
   wget https://github.com/evaleev/libint/releases/download/v${VERSION}/libint-${VERSION}.tgz
 fi
-if [[ ! -d libint-${VERSION}]]; then
+
+if [[ ! -d libint-${VERSION} ]]; then
   tar -zxf libint-${VERSION}.tgz
 fi
 
