@@ -15,7 +15,7 @@ libboost-dev \
 nwchem \
 wget \
 libeigen3-dev \
-libopenblas-dev
+libopenblas-dev \
 ```
 
 With the dependencies installed, you can then navigate to your desired install path and clone this repository and

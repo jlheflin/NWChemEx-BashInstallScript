@@ -14,7 +14,7 @@ fi
 
 cd ./NWChemEx
 
-if ! python3 -c "import venv" &> /dev/null; then
+if ! python3.12 -c "import venv" &> /dev/null; then
   echo "venv not installed"
   exit 1;
 else
@@ -22,7 +22,7 @@ else
 fi
 
 if [[ ! -d ".venv" ]]; then
-  python3 -m venv .venv
+  python3.12 -m venv .venv
   source ./.venv/bin/activate
 else
   source ./.venv/bin/activate
