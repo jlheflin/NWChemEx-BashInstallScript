@@ -11,7 +11,7 @@ build-essential \
 git \
 libopenmpi-dev \
 python3.12-dev \
-libboot-dev \
+libboost-dev \
 nwchem \
 wget \
 libeigen3-dev \
