@@ -54,7 +54,7 @@ CMAKE_FLAGS+="-DCMAKE_CXX_STANDARD=17 "
 
 if [[ -d "build" ]]; then
   echo "The 'build' already directory exists, reseting variables"
-  cmake -U * -S . -B build $CMAKE_FLAGS
+  cmake -U "*" -S . -B build $CMAKE_FLAGS
 else
   cmake -S . -B build $CMAKE_FLAGS
 fi
