@@ -38,6 +38,27 @@ source ./setup_env.sh
 This will export the PYTHONPATH and LD_LIBRARY_PATH variables, rendering the shell ready for Python development 
 activities.
 
+
+To test that the environment setup is working, you can run the follwing commands:
+
+```bash
+python3.12 -c "import friendzone"
+python3.12 -c "import nwchemex"
+python3.12 -c "import chemcache"
+python3.12 -c "import chemist"
+python3.12 -c "import integrals"
+python3.12 -c "import nux"
+python3.12 -c "import parallelzone"
+python3.12 -c "import pluginplay"
+python3.12 -c "import scf"
+python3.12 -c "import simde"
+python3.12 -c "import tensorwrapper"
+```
+
+If you encounter no errors, you have successfully sourced the `setup-env.sh` file and are ready to start using
+NWChemEx!
+
+
 The `install_nwchemex.sh` script can be modified to specify the specific version of Libint2, or even the specific URL
 you want to pull NWChemEx from. This script was made to be as hands off as possible for the user, so if you encounter 
 issues please let me know!
