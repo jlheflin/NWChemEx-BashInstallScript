@@ -36,7 +36,7 @@ if [[ ! -f libint-${VERSION}.tgz ]]; then
 fi
 
 if [[ ! -d libint-${VERSION} ]]; then
-  tar -zxf --quiet libint-${VERSION}.tgz
+  tar --quiet -zxf libint-${VERSION}.tgz
 fi
 
 LIBINT2_DIR=`pwd`/libint-${VERSION}
