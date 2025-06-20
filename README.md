@@ -55,7 +55,7 @@ python3.12 -c "import simde"
 python3.12 -c "import tensorwrapper"
 ```
 
-If you encounter no errors, you have successfully sourced the `setup-env.sh` file and are ready to start using
+If you encounter no errors, you have successfully sourced the `setup_env.sh` file and are ready to start using
 NWChemEx!
 
 
