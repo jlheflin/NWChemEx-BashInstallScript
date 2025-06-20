@@ -1,9 +1,14 @@
 # NWChemEx Unofficial Install Script
 
 Currently this scrips performs the NWChemEx setup for Ubuntu 24.04 LTS. To install NWChemEx via this script,
-you will need to first install the necessary packages for NWChemEx and its dependencies via the following
-command:
+you will need to first update your system and install the necessary packages for NWChemEx and its dependencies.
 
+Update the system:
+```bash
+sudo apt update && sudo apt upgrade
+```
+
+Install the necessary packages:
 ```bash
 sudo apt install python3.12-venv \
 cmake \
