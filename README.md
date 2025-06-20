@@ -5,6 +5,7 @@ you will need to first install the necessary packages for NWChemEx and its depen
 command:
 
 ```bash
+sudo apt update && sudo apt upgrade
 sudo apt install python3.12-venv \
 cmake \
 build-essential \
