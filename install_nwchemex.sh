@@ -5,6 +5,19 @@ REPO_URL="https://github.com/NWChemEx/NWChemEx.git"
 NWCHEMEX_DIR=`pwd`/NWChemEx
 INSTALL_DIR=$NWCHEMEX_DIR/install
 
+for cmd in python python3 python3.12; do
+  PYTHON_BIN=$(command -v "$cmd")
+  if [ -x "$PYTHON_BIN" ]; then
+    echo "Using Python: $PYTHON_BIN"
+    break
+  fi
+done
+
+if [ -z "$PYTHON_BIN" ]; then
+  echo "Error: No suitable Python binary found in PATH."
+  exit 1
+fi
+
 echo "Cloning NWChemEx Repository"
 if [[ -d "NWChemEx" ]]; then
   echo "NWChemEx folder exists"
@@ -14,7 +27,7 @@ fi
 
 cd ./NWChemEx
 
-if ! python3.12 -c "import venv" &> /dev/null; then
+if ! $PYTHON_BIN -c "import venv" &> /dev/null; then
   echo "venv not installed"
   exit 1;
 else
@@ -22,7 +35,7 @@ else
 fi
 
 if [[ ! -d ".venv" ]]; then
-  python3.12 -m venv .venv
+  $PYTHON_BIN -m venv .venv
   source ./.venv/bin/activate
   pip install ase networkx qcengine qcelemental setuptools
 else
