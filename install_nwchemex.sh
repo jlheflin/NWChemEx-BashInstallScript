@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-TOP_DIR=`pwd`
+TOP_DIR=$PWD
 REPO_URL="https://github.com/NWChemEx/NWChemEx.git"
-NWCHEMEX_DIR=`pwd`/NWChemEx
+NWCHEMEX_DIR=$PWD/NWChemEx
 INSTALL_DIR=$NWCHEMEX_DIR/install
 
 echo "Top Level Directory: $TOP_DIR"
@@ -57,8 +57,8 @@ if [[ ! -d libint-${VERSION} ]]; then
   tar -zxf libint-${VERSION}.tgz > /dev/null 2>&1
 fi
 
-LIBINT2_DIR=`pwd`/libint-${VERSION}
-LIBINT2_INSTALL=`pwd`/libint-${VERSION}/install
+LIBINT2_DIR=$PWD/libint-${VERSION}
+LIBINT2_INSTALL=$PWD/libint-${VERSION}/install
 cd libint-${VERSION}
 cmake -B build -S . -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE -DCMAKE_INSTALL_PREFIX=$LIBINT2_DIR/install
 cmake --build build --target install --parallel 4
